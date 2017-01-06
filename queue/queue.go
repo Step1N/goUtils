@@ -17,7 +17,7 @@ func newQueue() *Queue {
 	return &Queue{input: in, count: -1}
 }
 
-func (q *Queue) add(element interface{}) {
+func (q *Queue) Add(element interface{}) {
 	if q.count == -1 {
 		nq := newQueue()
 		nq.input = append(nq.input, element)
@@ -30,7 +30,7 @@ func (q *Queue) add(element interface{}) {
 	q.input = append(q.input, element)
 }
 
-func (q *Queue) remove() interface{} {
+func (q *Queue) Remove() interface{} {
 	if q.count == -1 {
 		return -1
 	}
@@ -41,7 +41,7 @@ func (q *Queue) remove() interface{} {
 	return el
 }
 
-func (q *Queue) print() {
+func (q *Queue) Print() {
 	if q.count == -1 {
 		return
 	}

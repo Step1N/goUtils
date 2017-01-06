@@ -17,7 +17,7 @@ func newStack() *Stack {
 	return &Stack{input: in, count: -1}
 }
 
-func (s *Stack) push(element interface{}) {
+func (s *Stack) Push(element interface{}) {
 	if s.count == -1 {
 		ns := newStack()
 		ns.input = append(ns.input, element)
@@ -29,7 +29,7 @@ func (s *Stack) push(element interface{}) {
 	s.input = append(s.input, element)
 }
 
-func (s *Stack) pop() interface{} {
+func (s *Stack) Pop() interface{} {
 	if len(s.input) == 0 {
 		s.count = -1
 		return -1
@@ -40,7 +40,7 @@ func (s *Stack) pop() interface{} {
 	return el
 }
 
-func (s *Stack) peek() interface{} {
+func (s *Stack) Peek() interface{} {
 	if len(s.input) == 0 {
 		return -1
 	}
@@ -48,9 +48,7 @@ func (s *Stack) peek() interface{} {
 	return s.input[s.count]
 }
 
-//sushanto.dodo@gmail.com
-//dx68tj
-func (s *Stack) print() {
+func (s *Stack) Print() {
 	if s.count == -1 {
 		return
 	}
