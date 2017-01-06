@@ -41,6 +41,11 @@ func (q *Queue) Remove() interface{} {
 	return el
 }
 
+func (q *Queue) Size() int{
+
+	return len(q.input)
+}
+
 func (q *Queue) Print() {
 	if q.count == -1 {
 		return

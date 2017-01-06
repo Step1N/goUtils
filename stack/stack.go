@@ -48,6 +48,11 @@ func (s *Stack) Peek() interface{} {
 	return s.input[s.count]
 }
 
+func (s *Stack) Size() int{
+
+	return len(s.input)
+}
+
 func (s *Stack) Print() {
 	if s.count == -1 {
 		return
